@@ -18,6 +18,17 @@ function App() {
         <h1>Scouting App</h1>
         <Navbar />
       </div>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/match" element={<Match />} />
+        <Route path="/strategic" element={<Strategic />} />
+        <Route path="/pit" element={<Pit />} />
+        <Route path="/datalookup" element={<Datalookup />} />
+        <Route path="/dtf" element={<Dtf />} />
+      
+      </Routes>
+
     </div>
   )
 }
