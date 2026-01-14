@@ -1,7 +1,85 @@
 import React from 'react'
+import '../styles/form.css';
+import { useState } from 'react';
 
 export default function Match() {
+  const [matchData, setMatchData] = useState ({
+    match_event: "",
+    scouter_initials: "",
+    match_level: "",
+    climb_successful: false
+  })
+
+  function handleChange(event){
+    const {name, value, type, checked} = event.target;
+
+    setMatchData(prevState => ({
+      ...prevState,
+      [name]: type === 'checkbox' ? checked : value,
+    }));
+  }
+
+  function handleSubmit(event) {
+      event.preventDefault();
+      console.log(matchData);
+  }
+
   return (
-    <div>match</div>
+    <div className="form-container">
+      {/* Call the handleSubmit function upon clicking on the Submit button. */}
+      <form className="form-card" onSubmit={handleSubmit}>  
+
+        <div className="form-group">
+          <label htmlFor="match-event">Match Event</label>
+          <input 
+            id="match_event" 
+            name="match_event" 
+            type="text" 
+            value={matchData.match_event}
+            onChange={handleChange}
+            required />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="scouter_initials">Scouter Initials</label>
+          <input 
+            id="scouter_initials" 
+            name="scouter_initials" 
+            type="text" 
+            minLength={2}
+            maxLength={3}
+            value={matchData.scouter_initials} 
+            onChange={handleChange} 
+            required />
+        </div>
+
+       <div className="form-group">
+          <label htmlFor="match_level">Match Level</label>
+          <input 
+            id="match_level" 
+            name="match_level" 
+            type="number" 
+            min = {1}
+            max = {5}
+            value={matchData.match_level} 
+            onChange={handleChange} 
+            required />
+        </div>
+
+       <div className="form-group">
+          <label htmlFor="climb_successful">Climb Successful?</label>
+          <input 
+            id="climb_successful" 
+            name="climb_successful" 
+            type="checkbox" 
+            checked={matchData.climb_successful} 
+            onChange={handleChange}  />
+        </div>
+
+        <button type="submit" className="submit-button">Submit</button>
+
+      </form>
+    </div>
+
   )
 }
