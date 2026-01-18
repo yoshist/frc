@@ -114,3 +114,16 @@ option:hover,
 option:checked {
   background-color: #eef2ff;
 }
+
+/* Button row (two buttons side-by-side) */
+.button-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Buttons inside a row share space */
+.button-row .submit-button {
+  flex: 1;
+  width: auto; /* override 100% width */
+}

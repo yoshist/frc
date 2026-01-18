@@ -113,7 +113,7 @@ export default function Match() {
           </select>
         </div>
 
-       <div className="form-group">
+        <div className="form-group">
           <label htmlFor="climb_successful">Climb Successful?</label>
           <input 
             id="climb_successful" 

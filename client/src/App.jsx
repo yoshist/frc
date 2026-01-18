@@ -9,6 +9,7 @@ import Match from './routes/match';
 import Navbar from './routes/navbar';
 import Pit from './routes/pit';
 import Strategic from './routes/strategic';
+import Settings from './routes/settings';
 
 function App() {
 
@@ -25,7 +26,8 @@ function App() {
         <Route path="/strategic" element={<Strategic />} />
         <Route path="/pit" element={<Pit />} />
         <Route path="/datalookup" element={<Datalookup />} />
-        <Route path="/dtf" element={<Dtf />} />      
+        <Route path="/dtf" element={<Dtf />} />   
+        <Route path="/settings" element={<Settings />} />   
       </Routes>
 
     </div>

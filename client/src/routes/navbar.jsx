@@ -11,6 +11,7 @@ export default function Navbar() {
         <li><Link to="Pit">Pit</Link></li>
         <li><Link to="Datalookup">Data Lookup</Link></li>
         <li><Link to="Dtf">DTF</Link></li>
+        <li><Link to="Settings">Settings</Link></li>
       </ul>
     </div>
   )
