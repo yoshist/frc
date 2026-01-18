@@ -25,8 +25,7 @@ function App() {
         <Route path="/strategic" element={<Strategic />} />
         <Route path="/pit" element={<Pit />} />
         <Route path="/datalookup" element={<Datalookup />} />
-        <Route path="/dtf" element={<Dtf />} />
-      
+        <Route path="/dtf" element={<Dtf />} />      
       </Routes>
 
     </div>

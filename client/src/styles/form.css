@@ -84,3 +84,33 @@ textarea:focus {
     padding: 1.5rem;
   }
 }
+
+/* Select options */
+select {
+  appearance: none;          /* Remove default OS styling */
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+/* Dropdown arrow (optional but nice) */
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23999' d='M5.5 7.5L10 12l4.5-4.5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+/* Option styling */
+option {
+  font-size: 1rem;
+  padding: 0.6rem;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Hover & selected states (browser support varies) */
+option:hover,
+option:checked {
+  background-color: #eef2ff;
+}
